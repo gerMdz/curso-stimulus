@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <aside class="col-xs-12 col-lg-3">
+                {% if featuredProduct %}
+                    {{ include('cart/_featuredSidebar.html.twig') }}
+                {% endif %}
+            </aside>
+
+            <div class="col-xs-12 col-lg-9 cart">
+                <h1>Shopping Cart</h1>
+                <div
+                        class="component-light p-3"
+                        {{ stimulus_controller('cart-list', {
+                            cartRefreshUrl: path('_app_cart_list')
+                        }) }}
+                >{{ include('cart/_cartList.html.twig') }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
