@@ -100,6 +100,6 @@ us do what we love!
 
 <3 Your friends at SymfonyCasts
 
-### Cap 23
-[ux-chart-js](https://symfonycasts.com/screencast/stimulus/ux-chart-js)
+### Cap 25
+[Extending a UX Controller](https://symfonycasts.com/screencast/stimulus/extend-chartjs)
 
