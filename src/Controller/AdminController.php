@@ -24,22 +24,21 @@ class AdminController extends AbstractController
                     'label' => 'Sales!',
                     'backgroundColor' => 'rgb(255, 99, 132)',
                     'borderColor' => 'rgb(255, 99, 132)',
-                    'data' => [522, 1500, 2250, 2197, 2345, 3122, 3099],
+                    'data' => [0, 10, 5, 2, 20, 30, 45 ],
                 ],
             ],
         ]);
 
-//        $chart->setOptions([
-//            'scales' => [
-//                'y' => [
-//                    'suggestedMin' => 0,
-//                    'suggestedMax' => 100,
-//                ],
-//            ],
-//        ]);
-
-        return $this->render('admin/dashboard.html.twig', [
-            'chart' => $chart,
+        $chart->setOptions([
+            'scales' => [
+                'yAxes' => [[
+                    'ticks' => [
+                        'beginAtZero' => true
+                    ]
+                ]]
+            ],
         ]);
+
+        return $this->render('admin/dashboard.html.twig', compact('chart'));
     }
 }
