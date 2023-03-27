@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@babel/preset-react": "^7.0.0",
         "@hotwired/stimulus": "^3.0.0",
         "@symfony/stimulus-bridge": "^3.2.1",
         "@symfony/ux-chartjs": "file:vendor/symfony/ux-chartjs/assets",
@@ -8,6 +9,8 @@
         "bootstrap": "4",
         "chart.js": "^3.4.1",
         "core-js": "^3.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "regenerator-runtime": "^0.13.2",
         "sweetalert2": "^11.6.15",
         "webpack-notifier": "^1.6.0"

@@ -100,6 +100,6 @@ us do what we love!
 
 <3 Your friends at SymfonyCasts
 
-### Cap 26
-[React (or Vue) ❤️ Stimulus](https://symfonycasts.com/screencast/stimulus/react)
+### Cap 27
+[Pasar los datos del servidor directamente a React Props](https://symfonycasts.com/screencast/stimulus/react-props#play)
 
