@@ -20,7 +20,7 @@ export default class MadeWithLove extends React.Component {
                 >
                     {'❤️'.repeat(this.state.hearts)}
                 </span>
-                <span> by your friends at </span>
+                <span> por nuestros amigos de </span>
                 <a href="https://symfonycasts.com" target="_blank">
                     SymfonyCasts
                 </a>

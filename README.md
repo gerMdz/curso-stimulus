@@ -100,6 +100,6 @@ us do what we love!
 
 <3 Your friends at SymfonyCasts
 
-### Cap 27
-[Pasar los datos del servidor directamente a React Props](https://symfonycasts.com/screencast/stimulus/react-props#play)
+### Cap 8
+[Webpack Bundle Analyzer](https://symfonycasts.com/screencast/stimulus/analyze#play)
 
