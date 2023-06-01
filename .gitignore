@@ -20,3 +20,5 @@ yarn-error.log
 /.idea
 /tutorial/FeaturedProduct.js
 /tutorial/MadeWithLove.js
+/.php-version
+/migrations/Version20230425185741.php
