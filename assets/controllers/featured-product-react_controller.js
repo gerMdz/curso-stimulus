@@ -1,16 +1,22 @@
 import {Controller} from "@hotwired/stimulus";
-import ReactDom from 'react-dom';
 import React from "react";
-import ProductoDestacado from "../components/FeaturedProduct";
+import FeaturedProduct from "../components/FeaturedProduct";
 
 export default class extends Controller {
     static values = {
         product: Object
     }
     connect() {
-        ReactDom.render(
-            <ProductoDestacado product={this.productValue} />,
-            this.element
-        )
+        import('react-dom').then((ReactDom) => {
+            ReactDom.default.render(
+                <FeaturedProduct product={this.productValue}/>,
+                this.element
+            )
+        })
+
+        // ReactDom.render(
+        //     <ProductoDestacado product={this.productValue} />,
+        //     this.element
+        // )
     }
 }

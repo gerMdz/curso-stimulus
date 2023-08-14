@@ -101,5 +101,5 @@ us do what we love!
 <3 Your friends at SymfonyCasts
 
 ### Cap 9
-[Async/Dynamic import()](https://symfonycasts.com/screencast/stimulus/async-imports#play)
+[Magi: Lazy-Loading UX Controllers](https://symfonycasts.com/screencast/stimulus/lazy#play)
 
