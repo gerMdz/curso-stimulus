@@ -103,3 +103,5 @@ us do what we love!
 ### Cap 9
 [Magi: Lazy-Loading UX Controllers](https://symfonycasts.com/screencast/stimulus/lazy#play)
 
+Atento capítulo 45. Con Cambios.
+
