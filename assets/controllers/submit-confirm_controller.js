@@ -3,6 +3,8 @@ import Swal from "sweetalert2";
 import { useDispatch } from "stimulus-use";
 import {debug} from "@symfony/webpack-encore/lib/logger";
 
+
+/* stimulusFetch: 'lazy' */
 export default class extends Controller {
 
     static values = {

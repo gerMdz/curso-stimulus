@@ -100,8 +100,8 @@ us do what we love!
 
 <3 Your friends at SymfonyCasts
 
-### Cap 9
-[Magi: Lazy-Loading UX Controllers](https://symfonycasts.com/screencast/stimulus/lazy#play)
+### Cap 33
+[Abriendo un modal](https://symfonycasts.com/screencast/stimulus/modal#play)
 
-Atento capítulo 45. Con Cambios.
+
 

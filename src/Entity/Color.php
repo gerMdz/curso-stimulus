@@ -32,6 +32,11 @@ class Color
         $this->hexColor = $hexColor;
     }
 
+    public function __toString()
+    {
+     return (string) $this->hexColor;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
