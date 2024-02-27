@@ -100,8 +100,8 @@ us do what we love!
 
 <3 Your friends at SymfonyCasts
 
-### Cap 33
-[Abriendo un modal](https://symfonycasts.com/screencast/stimulus/modal#play)
+### Cap 35
+[Creando modal](https://symfonycasts.com/screencast/stimulus/form-ajax#play)
 
 
 

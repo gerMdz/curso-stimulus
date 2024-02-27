@@ -148,3 +148,7 @@ h1 {
 .sidebar .nav-link.active .feather {
     color: inherit;
 }
+
+.modal-body button{
+    display: none;
+}
