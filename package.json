@@ -6,7 +6,7 @@
         "@symfony/stimulus-bridge": "^3.2.1",
         "@symfony/ux-chartjs": "file:vendor/symfony/ux-chartjs/assets",
         "@symfony/webpack-encore": "^1.7.0",
-        "axios": "^1.2.1",
+        "axios": "^1.6.0",
         "bootstrap": "5",
         "chart.js": "^3.4.1",
         "core-js": "^3.0.0",
