@@ -6,7 +6,7 @@
         "@symfony/stimulus-bridge": "^3.2.1",
         "@symfony/ux-chartjs": "file:vendor/symfony/ux-chartjs/assets",
         "@symfony/webpack-encore": "^1.7.0",
-        "axios": "^1.2.1",
+        "axios": "^1.6.0",
         "bootstrap": "5",
         "chart.js": "^3.4.1",
         "core-js": "^3.0.0",
@@ -14,7 +14,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "regenerator-runtime": "^0.13.2",
-        "sweetalert2": "^11.6.15",
+        "sweetalert2": "^11.12.3",
         "webpack-bundle-analyzer": "^4.9.0",
         "webpack-notifier": "^1.6.0"
     },
