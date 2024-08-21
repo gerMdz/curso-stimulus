@@ -8,12 +8,13 @@ export default class extends Controller {
     static values = {
         formUrl: String,
     }
+    modal = null;
 
     async openModal(event) {
         this.modalBodyTarget.innerHTML = 'Cargando... '
 
-        const modal = new Modal(this.modalTarget)
-        modal.show()
+        this.modal = new Modal(this.modalTarget)
+        this.modal.show()
 
         this.modalBodyTarget.innerHTML = await $.ajax(this.formUrlValue)
     }
@@ -23,10 +24,21 @@ export default class extends Controller {
         event.preventDefault();
         const $form = $(this.modalBodyTarget).find('form');
 
-        this.modalBodyTarget.innerHTML = await $.ajax({
-            url: this.formUrlValue,
-            method: $form.prop('method'),
-            data: $form.serialize()
-        })
+        try {
+
+
+            await $.ajax({
+                url: this.formUrlValue,
+                method: $form.prop('method'),
+                data: $form.serialize()
+            })
+            this.modal.hide()
+        }catch (e) {
+            this.modalBodyTarget.innerHTML = e.responseText;
+        }
+    }
+
+    modalHidden(){
+        console.log('Se ocultó')
     }
 }

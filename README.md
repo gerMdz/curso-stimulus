@@ -100,8 +100,8 @@ us do what we love!
 
 <3 Your friends at SymfonyCasts
 
-### Cap 37
-[Ajax form](https://symfonycasts.com/screencast/stimulus/form-responses#play)
+### Cap 38
+[Ajax element reload](https://symfonycasts.com/screencast/stimulus/reload-controller#play)
 
 
 

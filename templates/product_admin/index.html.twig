@@ -6,9 +6,12 @@
     <div class="container-fluid mt-4">
         <div class="d-flex flex-row">
             <h1 class="me-3">Listado de Productos</h1>
-            <div {{ stimulus_controller('modal-form', {
+            <div
+                    {{ stimulus_controller('modal-form', {
                 formUrl: path('app_product_admin_new')
-            }) }}>
+            }) }}
+                    data-action="hidden.bs.modal->modal-form#modalHidden"
+            >
                 <button class="btn btn-primary btn-sm"
                         data-action="modal-form#openModal"
                 >
