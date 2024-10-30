@@ -1,15 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product index{% endblock %}
+{% block title %}Productos index{% endblock %}
 
 {% block body %}
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4"
+            {{ stimulus_controller('reload-content', {
+                url: path('app_product_admin_index')
+            }) }}
+    >
         <div class="d-flex flex-row">
             <h1 class="me-3">Listado de Productos</h1>
             <div
                     {{ stimulus_controller('modal-form', {
-                formUrl: path('app_product_admin_new')
-            }) }}
+                        formUrl: path('app_product_admin_new')
+                    }) }}
                     data-action="hidden.bs.modal->modal-form#modalHidden"
             >
                 <button class="btn btn-primary btn-sm"
@@ -22,43 +26,9 @@
                 }) }}
             </div>
         </div>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Brand</th>
-                <th>Weight</th>
-                <th>Price</th>
-                <th>StockQuantity</th>
-                <th>ImageFilename</th>
-                <th>actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for product in products %}
-                <tr>
-                    <td>{{ product.id }}</td>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.description }}</td>
-                    <td>{{ product.brand }}</td>
-                    <td>{{ product.weight }}</td>
-                    <td>{{ product.price }}</td>
-                    <td>{{ product.stockQuantity }}</td>
-                    <td>{{ product.imageFilename }}</td>
-                    <td>
-                        <a href="{{ path('app_product_admin_show', {'id': product.id}) }}">show</a>
-                        <a href="{{ path('app_product_admin_edit', {'id': product.id}) }}">edit</a>
-                    </td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan="9">no records found</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+        <div data-reload-content-target="content">
+            {{ include('product_admin/_list.html.twig') }}
+        </div>
 
         <a href="{{ path('app_product_admin_new') }}">Crear nuevo producto</a>
     </div>

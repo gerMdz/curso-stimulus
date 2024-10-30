@@ -19,9 +19,11 @@ class ProductAdminController extends AbstractController
     /**
      * @Route("/", name="app_product_admin_index", methods={"GET"})
      */
-    public function index(ProductRepository $productRepository): Response
+    public function index(ProductRepository $productRepository, Request $request): Response
     {
-        return $this->render('product_admin/index.html.twig', [
+        $template = $request->isXmlHttpRequest() ? '_list.html.twig' : 'index.html.twig';
+
+        return $this->render('product_admin/' . $template, [
             'products' => $productRepository->findBy([], ['id' => 'DESC']),
         ]);
     }
@@ -39,7 +41,7 @@ class ProductAdminController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
-            if($request->isXmlHttpRequest()){
+            if ($request->isXmlHttpRequest()) {
                 return new Response(null, 204);
             }
 
@@ -48,12 +50,12 @@ class ProductAdminController extends AbstractController
 
         $template = $request->isXmlHttpRequest() ? '_form.html.twig' : 'new.html.twig';
 
-        return $this->render('product_admin/'.$template, [
+        return $this->render('product_admin/' . $template, [
             'product' => $product,
             'form' => $form->createView(),
         ], new Response(
             null,
-            $form->isSubmitted() && !$form->isValid() ? 422:200
+            $form->isSubmitted() && !$form->isValid() ? 422 : 200
         ));
     }
 
@@ -92,7 +94,7 @@ class ProductAdminController extends AbstractController
      */
     public function delete(Request $request, Product $product, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$product->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $product->getId(), $request->request->get('_token'))) {
             $entityManager->remove($product);
             $entityManager->flush();
         }
