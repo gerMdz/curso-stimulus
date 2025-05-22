@@ -4620,10 +4620,10 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
-sweetalert2@^11.19.1:
-  version "11.19.1"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.19.1.tgz#b6583a3db8e17b2408f45c19d855f1416b37c2ae"
-  integrity sha512-+8yws3Sc1srAZbrgdhmEIZny1I1UOYhJOIOdtOlv4TYaP5kkwQ9Zm8/BT23Qg+KdByCNOazltxEJAHzXVu8mhA==
+sweetalert2@^11.21.2:
+  version "11.21.2"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.21.2.tgz#319bc4a737ca9fe577306a4c18ce46854694e846"
+  integrity sha512-DNNFzx16LBQDZh7r5WOfeAfWZBdEdLHl3+tpO9Z1WWKMzdsgBgpLPBduJWVNMB283HYcm8ex99clLYXki21hdA==
 
 sync-rpc@^1.3.6:
   version "1.3.6"
